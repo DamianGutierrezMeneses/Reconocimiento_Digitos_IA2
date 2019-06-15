@@ -2,45 +2,41 @@
    <img src="img/logo.png">
 </p>
 
-# Identificador de Dígitos I.A2
+# Digit Identifier I.A2
 
-### Proyecto Interciclo
-**Alumnos:** Frank Montalvo Ochoa , Damián Gutiérrez<br/>
+### Intercycle Project
+**Students:** Frank Montalvo Ochoa , Damián Gutiérrez<br/>
 
-## ¿Que es un perceptrón y cómo funciona?
+## What is a perceptron and how does it work?
 
-Se define a un perceptrón como la forma más simple de una red neuronal, es usada para la clasificación de un tipo especial de patrones, los linealmente separables (que se encuentran a ambos lados de un hiperplano). Básicamente, consiste de una neurona con pesos sinápticos y umbral ajustables.
-Se usa un algoritmo para ajustar los parámetros libres de esta red neuronal, esta apareció por primera vez en un procedimiento de aprendizaje desarrollado por Rosenblatt, el demostró que, si los patrones usados para entrenar el perceptrón son sacados de dos clases linealmente separables, entonces el algoritmo del perceptrón converge y toma como superficie de decisión un hiperplano entre estas dos clases. La prueba de convergencia del algoritmo es conocida como el teorema de convergencia del perceptrón.
+A perceptron is defined as the simplest form of a neural network, it is used for the classification of a special type of patterns, the linearly separable ones (found on both sides of a hyperplane). Basically, it consists of a neuron with adjustable synaptic weights and threshold. An algorithm is used to adjust the free parameters of this neural network, this appeared for the first time in a learning procedure developed by Rosenblatt, he showed that, if the patterns used to train the perceptron are derived from two linearly separable classes, then the The perceptron algorithm converges and takes as a decision surface a hyperplane between these two classes. The convergence test of the algorithm is known as the perceptron convergence theorem.
 
 <p align="center">
    <img src="img/perceptron.png">
 </p>
 
-Por ejemplo, se describe un perceptrón de una capa que tiene sólo una neurona. Dicho perceptrón está limitado a realizar clasificación de patrones con sólo dos clases. Expandiendo la capa de salida del perceptrón para incluir más que una neurona, podemos realizar dicha clasificación con más de dos clases. Sin embargo, las clases tendrían que ser linealmente separables para que el perceptrón trabaje correctamente.
+For example, a perceptron of a layer having only one neuron is described. This perceptron is limited to perform pattern classification with only two classes. By expanding the output layer of the perceptron to include more than one neuron, we can perform this classification with more than two classes. However, the classes would have to be linearly separable for the perceptron to work correctly.
 
-## Red Neuronal
+## Neural Network
 
-Una red neuronal es un modelo simplificado que emula el modo en que el cerebro humano procesa la información, funciona simultaneando un número elevado de unidades de procesamiento interconectadas que parecen versiones abstractas de neuronas.
-Las unidades de procesamiento se organizan en capas y existen tres partes normalmente en una red neuronal:
+A neural network is a simplified model that emulates the way in which the human brain processes information; it works simultaneously with a high number of interconnected processing units that look like abstract versions of neurons. The processing units are organized in layers and there are three parts normally in a neural network:
+* An input layer, with units representing the input fields
+* One or several hidden layers, and
+* An output layer, with a unit or units representing the field or fields of destination.
+The units are connected with variable connection forces (or weights). The input data is presented in the first layer, and the values are propagated from each neuron to each neuron of the next layer, finally, a result is sent from the output layer. The network learns by examining the individual records, generating a prediction for each record and making adjustments to the weights when it makes an incorrect prediction. This process is repeated many times and the network continues to improve its predictions until it has reached one or more stop criteria. At first, all the weights are random and the responses that result from the network are, possibly, crazy. The network learns through training. The examples are continually presented to the network for which the result is known, and the answers provided are compared with the known results. The information from this comparison is passed back through the network, changing the weights gradually. As the training progresses, the network becomes increasingly accurate in the replication of known results. Once trained, the network can be applied to future cases in which the result is unknown.
 
-* Una capa de entrada, con unidades que representan los campos de entrada
-* Una o varias capas ocultas, y 
-* Una capa de salida, con una unidad o unidades que representa el campo o los campos de destino. 
-	
-Las unidades se conectan con fuerzas de conexión variables (o ponderaciones). Los datos de entrada se presentan en la primera capa, y los valores se propagan desde cada neurona hasta cada neurona de la capa siguiente, finalmente, se envía un resultado desde la capa de salida.
-La red aprende examinando los registros individuales, generando una predicción para cada registro y realizando ajustes a las ponderaciones cuando realiza una predicción incorrecta. Este proceso se repite muchas veces y la red sigue mejorando sus predicciones hasta haber alcanzado uno o varios criterios de parada.
-Al principio, todas las ponderaciones son aleatorias y las respuestas que resultan de la red son, posiblemente, disparatadas. La red aprende a través del entrenamiento. Continuamente se presentan a la red ejemplos para los que se conoce el resultado, y las respuestas que proporciona se comparan con los resultados conocidos. La información procedente de esta comparación se pasa hacia atrás a través de la red, cambiando las ponderaciones gradualmente. A medida que progresa el entrenamiento, la red se va haciendo cada vez más precisa en la replicación de resultados conocidos. Una vez entrenada, la red se puede aplicar a casos futuros en los que se desconoce el resultado.
+## Logistic activation
 
-## Activación logística
+This model optimizes the record loss function using LBFGS or stochastic gradient descent. L-BFGS is a method of minimization or quasi-Newton optimization of functions with a large number of parameters or of great complexity. It is a method that makes limited use of memory (it uses much less memory than other algorithms for the same problem). L-BFGS comes from BFGS of limited memory, it allows to obtain the minimum of a function. It only needs the function and its gradient, but not the Hessian matrix. L-BFGS, developed by Jorge Nocedal is able to solve functions without restrictions, while the variant L-BFGS-B (Jorge Nocedal and Richard Byrd) can solve functions with simple constraints (of the type li <xi <ui where xi is the variable i-th and li and ui the lower and upper limits of that variable) in its parameters. If the restrictions are complex, other methods, such as KNITRO, should be used. For each iteration the algorithm looks for an approximation of the Hessian matrix, specifically its inverse. If the function has N variables, the Hessian matrix has N ^ 2 elements. If N is large, the time needed to calculate the entire matrix exactly can be prohibitive. This is why an approximation is sought. Logistic regression is an automatic learning classification algorithm that is used to predict the probability of a categorical dependent variable. Basically, it can be evident that the logistic regression as a neural network of a layer. In addition, the logistic regression has a large robust model for simple classification tasks.
 
-Este modelo optimiza la función de pérdida de registro utilizando LBFGS o descenso de gradiente estocástico. L-BFGS es un método de minimización u optimización quasi-Newton de funciones con un gran número de parámetros o de una gran complejidad. Se trata de un método que hace un uso limitado de la memoria (usa mucha menos memoria que otros algoritmos para el mismo problema). 
-L-BFGS viene de BFGS de memoria limitada, permite obtener el mínimo de una función. Únicamente necesita la función y su gradiente, pero no la matriz Hessiana. L-BFGS, desarrollado por Jorge Nocedal es capaz de resolver funciones sin restricciones, mientras que la variante L-BFGS-B (Jorge Nocedal y Richard Byrd) puede resolver funciones con restricciones simples (del tipo li < xi < ui siendo xi la variable i-ésima y li y ui los límites inferior y superior de esa variable) en sus parámetros. Si las restricciones son complejas otros métodos, como KNITRO, deben ser usados.
-Para cada iteración el algoritmo busca una aproximación de la matriz Hessiana, concretamente de su inversa. Si la función tiene N variables, la matriz Hessiana tiene N^2 elementos. Si N es grande, el tiempo necesario para calcular toda la matriz de forma exacta puede ser prohibitivo. Es por esto que se busca una aproximación.
-La regresión logística es un algoritmo de clasificación de aprendizaje automático que se utiliza para predecir la probabilidad de una variable dependiente categórica. Básicamente, puede ser evidente que la regresión logística como una red neuronal de una capa. Además, la regresión logística tiene un gran modelo robusto para tareas de clasificación simples.
+For more information in the following video:
+<p align="center">
+ [![Alt text](https://i.ytimg.com/vi/IcPyth2mnyM/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDBJp-ZJqbz3K0C6j0rMclxmtpBLA)](https://www.youtube.com/watch?v=IcPyth2mnyM)
+<p>
 
-# Anexo Aplicación
+# Aplication
 
-## Interfaz
+## Interface
 
 <p align="center">
    <img src="img/gui.png">
@@ -52,25 +48,25 @@ La regresión logística es un algoritmo de clasificación de aprendizaje autom�
    <img src="img/panel.png">
 </p>
 
-## Matriz de confusión 
+## Matrix of confusion 
 
 <p align="center">
    <img src="img/matrix.png">
 </p>
 
-## Precisión de la red  
+## Precision of the network  
 
 <p align="center">
    <img src="img/precision.png">
 </p>
 
-## Predicción de la red
+## Predicting the network
 
 <p align="center">
    <img src="img/prediction.png">
 </p>
 
-# BIBLIOGRAFIA
+# Bibliography
 1. http://bibing.us.es/proyectos/abreproy/11084/fichero/Memoria+por+cap%C3%ADtulos+%252FCap%C3%ADtulo+4.pdf+
 2. https://www.ibm.com/support/knowledgecenter/es/SS3RA7_sub/modeler_mainhelp_client_ddita/components/neuralnet/neuralnet_model.html
 
