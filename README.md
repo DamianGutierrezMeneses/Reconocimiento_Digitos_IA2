@@ -30,9 +30,9 @@ The units are connected with variable connection forces (or weights). The input 
 This model optimizes the record loss function using LBFGS or stochastic gradient descent. L-BFGS is a method of minimization or quasi-Newton optimization of functions with a large number of parameters or of great complexity. It is a method that makes limited use of memory (it uses much less memory than other algorithms for the same problem). L-BFGS comes from BFGS of limited memory, it allows to obtain the minimum of a function. It only needs the function and its gradient, but not the Hessian matrix. L-BFGS, developed by Jorge Nocedal is able to solve functions without restrictions, while the variant L-BFGS-B (Jorge Nocedal and Richard Byrd) can solve functions with simple constraints (of the type li <xi <ui where xi is the variable i-th and li and ui the lower and upper limits of that variable) in its parameters. If the restrictions are complex, other methods, such as KNITRO, should be used. For each iteration the algorithm looks for an approximation of the Hessian matrix, specifically its inverse. If the function has N variables, the Hessian matrix has N ^ 2 elements. If N is large, the time needed to calculate the entire matrix exactly can be prohibitive. This is why an approximation is sought. Logistic regression is an automatic learning classification algorithm that is used to predict the probability of a categorical dependent variable. Basically, it can be evident that the logistic regression as a neural network of a layer. In addition, the logistic regression has a large robust model for simple classification tasks.
 
 For more information in the following video:
-<p align="center">
+
  [![Alt text](https://i.ytimg.com/vi/IcPyth2mnyM/hqdefault.jpg?sqp=-oaymwEjCPYBEIoBSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLDBJp-ZJqbz3K0C6j0rMclxmtpBLA)](https://www.youtube.com/watch?v=IcPyth2mnyM)
-<p>
+
 
 # Aplication
 
